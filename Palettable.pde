@@ -1,4 +1,4 @@
-int rootH = 255;
+int rootH = 50;
 int rootS = 65;
 int rootB = 65;
 color root;
@@ -69,16 +69,43 @@ boolean overSwatch(int x, int y, int h) {
 void mousePressed() {
   if (isOverRoot) {
     rectMode(CENTER);
+    
     fill(root);
     rect(2*width/3, height/2, rootW, rootW, curve);
     
-    temp = color(rootH, rootS + 10, rootB);
+    temp = color(rootH, rootS + 20, rootB);
     fill(temp);
     rect(2*width/3 + 55, height/2, rootW, rootW, curve);
     
-    temp = color(rootH, rootS + 20, rootB);
+    temp = color(rootH, rootS + 40, rootB);
     fill(temp);
     rect(2*width/3 + 110, height/2, rootW, rootW, curve);
+    
+    temp = color(rootH, rootS - 20, rootB);
+    fill(temp);
+    rect(2*width/3 - 55, height/2, rootW, rootW, curve);
+    
+    temp = color(rootH, rootS - 40, rootB);
+    fill(temp);
+    rect(2*width/3 - 110, height/2, rootW, rootW, curve);
+    
+    
+    
+    temp = color(rootH, rootS, rootB + 20);
+    fill(temp);
+    rect(2*width/3, height/2 - 55, rootW, rootW, curve);
+    
+    temp = color(rootH, rootS, rootB + 40);
+    fill(temp);
+    rect(2*width/3, height/2 - 110, rootW, rootW, curve);
+    
+    temp = color(rootH, rootS, rootB - 20);
+    fill(temp);
+    rect(2*width/3, height/2 + 55, rootW, rootW, curve);
+    
+    temp = color(rootH, rootS, rootB - 40);
+    fill(temp);
+    rect(2*width/3, height/2 + 110, rootW, rootW, curve);
     
   }
 }
